@@ -1,4 +1,4 @@
-1. Write more tests.
+1. Write tests.
 2. Figure out a way to throw an intelligent error on something like 283t.
    Right now, this gets parsed as 283 applied to t, which doesn't make any
    sense.
