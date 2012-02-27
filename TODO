@@ -1,0 +1,12 @@
+1. Write more tests.
+2. Figure out a way to throw an intelligent error on something like 283t.
+   Right now, this gets parsed as 283 applied to t, which doesn't make any
+   sense.
+3. There is a shift-reduce conflict in the parser around the sql-like WHERE
+   syntax. It seems that the parser does what we want right now, but we should
+   not leave a dangling shift-reduce conflict...
+3'. ONE was to address 3 is to store the whole where clause as a continuation of
+    the table. This is what I have right now.
+4. Remember that in q, if the lambda arg bracket is omitted, there are three default
+   args x, y and z. Right now, I leave the args as an empty set in this case. Maybe
+   I will come back to this later on
